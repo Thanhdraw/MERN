@@ -5,7 +5,11 @@ const handlebars = require('express-handlebars');
 const path = require('path');
 const port = 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('/public/img'))
+app.use(express.static(path.join(__dirname,'/public')));
+
+app.use(express.static(path.join(__dirname,'/public/img/')));
+
 
 
 app.use(morgan('combined'));
